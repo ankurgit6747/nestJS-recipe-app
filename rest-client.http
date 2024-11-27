@@ -1,0 +1,39 @@
+GET http://localhost:3000/
+
+### SEND FETCH RECIPE REQUEST
+GET http://localhost:3000/recipes
+
+### POST RECIPE REQUEST
+POST http://localhost:3000/recipes
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "Spaghetti",
+  "servings": 4,
+  "ingredients": [
+    "1 pound spaghetti",
+    "10 cloves garlic, minced",
+    "1/2 cup extra virgin olive oil",
+    "1/4 cup chopped fresh parsley",
+    "Red pepper flakes to taste",
+    "Salt and pepper to taste"
+  ],
+  "instructions": [
+    "Cook spaghetti according to package directions.",
+    "Heat olive oil in a large skillet over medium heat.",
+    "Add garlic and red pepper flakes, cook until fragrant.",
+    "Drain spaghetti and add to skillet with garlic oil.",
+    "Toss to coat, add parsley, salt, and pepper to taste.",
+    "Serve immediately."
+  ],
+  "duration": "00:30"
+}
+
+### FIND RECIPE REQUEST
+GET http://localhost:3000/recipes/2
+
+
+### update RECIPE REQUEST
+GET http://localhost:3000/recipes/1
+
