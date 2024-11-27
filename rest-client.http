@@ -1,9 +1,9 @@
 GET http://localhost:3000/
 
-### SEND FETCH RECIPE REQUEST
+### FETCH
 GET http://localhost:3000/recipes
 
-### POST RECIPE REQUEST
+### SEND
 POST http://localhost:3000/recipes
 Content-Type: application/json
 
@@ -30,10 +30,10 @@ Content-Type: application/json
   "duration": "00:30"
 }
 
-### FIND RECIPE REQUEST
+### FIND
 GET http://localhost:3000/recipes/2
 
 
-### update RECIPE REQUEST
+### UPDATE
 GET http://localhost:3000/recipes/1
 

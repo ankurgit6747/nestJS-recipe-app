@@ -15,7 +15,8 @@ export class RecipesService {
 
   findAll() {
     // fetch the recipes from the DB
-    throw new Error('error in DB while fetching records')
+    // throw new Error('error in DB while fetching records')
+    
     return this.recipes
   }
 }

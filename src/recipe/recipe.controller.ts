@@ -1,11 +1,18 @@
-import { Body, Controller, Delete, Get, HttpException, HttpStatus, Param, ParseIntPipe, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpException, HttpStatus, Inject, Param, ParseIntPipe, Post, Put } from '@nestjs/common';
 import { RecipesService } from './recipe.service';
 import { CreateRecipeDTO } from './dto/create-recipe-dto';
+import { Connection, connection } from 'src/common/constants/connection';
 
 @Controller('recipes')
 export class RecipeController {
 
-  constructor(private recipesService: RecipesService) {}
+  constructor(
+    private recipesService: RecipesService,
+    @Inject('CONNECTION')
+    private connection: Connection
+  ) {
+    console.log(`THIS IS CONNECTION STRING ${this.connection.CONNECTION_STRING}`)
+  }
 
   @Post()
   create(@Body() createRecipeDTO: CreateRecipeDTO) {
